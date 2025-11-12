@@ -1,21 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Num{
-	int num;
-	public:
-		Num(int n){
-			num=n;
-		}
-		void func(){
-			int sum;
-			for(int i=1;i<num;i++){
-				 sum=sum+i;
-			}
-			cout<<"sum:"<<sum;
-		}
+
+class Sum {
+private:
+    int n, total;
+public:
+    Sum(int num) {
+        n = num;
+        total = 0;
+        for(int i = 1; i <= n; i++)
+            total += i;
+    }
+
+    void display() {
+        cout << "Sum of numbers from 1 to " << n << " = " << total << endl;
+    }
 };
-int main(){
-	Num n(5);
-	n.func();
+
+int main() {
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    Sum obj(n);
+    obj.display();
     return 0;
 }
