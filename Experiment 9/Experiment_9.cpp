@@ -60,4 +60,6 @@ int main(){
     cout<<"digit count is :"<<digitcount<<endl;
     cout<<"the space count is:"<<spacecount<<endl;
     fin.close();
+    fout.close();
+    return 0;
 }
